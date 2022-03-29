@@ -7,6 +7,11 @@
   "dependencies": {
     "comlink": "4.3.1"
   },
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "test": "jest test --passWithNoTests",
+    "patch": "npm version patch"
+  },
   "devDependencies": {
     "@types/jest": "^27.4.1",
     "@types/node": "^16.11.26",
@@ -15,11 +20,6 @@
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
-  },
-  "scripts": {
-    "build": "tsc --project tsconfig.json",
-    "test": "jest test --passWithNoTests",
-    "deploy": ":"
   },
   "eslintConfig": {
     "extends": [
