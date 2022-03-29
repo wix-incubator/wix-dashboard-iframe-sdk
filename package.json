@@ -1,11 +1,11 @@
 {
   "name": "wix-dashboard-iframe-sdk",
-  "version": "1.1.1",
+  "version": "1.2.2",
   "main": "./dist/src/index",
   "license": "MIT",
   "author": "Mor Shemesh",
   "dependencies": {
-    "comlink": "4.3.0"
+    "comlink": "4.3.1"
   },
   "scripts": {
     "build": "tsc --project tsconfig.json",
