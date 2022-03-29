@@ -4,7 +4,7 @@ import { getInstance } from './instance';
 import { iframeHandshake } from './iframeHandshake';
 
 const BRIDGE_TYPE = 'comlink';
-const COMLINK_VERSION = '4.3.1';
+const COMLINK_VERSION = '4.3.0';
 
 const dashboardApiFactory = (port: MessagePort): DashboardSDK => {
   const api = wrap<Pick<DashboardSDK, 'onEnvUpdated'>>(port);
