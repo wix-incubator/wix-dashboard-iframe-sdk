@@ -24,15 +24,19 @@ jobs:
           keys:
             - yarn-packages-{{ checksum "yarn.lock" }}
 
-      - run: yarn install
+      - run:
+          name: Install Dependencies
+          command: yarn install --frozen-lockfile --cache-folder ~/.cache/yarn
+
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: yarn-packages-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+
       - run:
           name: Run tests
           command: yarn test
-
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
 
       - persist_to_workspace:
           root: ~/repo
