@@ -1,0 +1,28 @@
+{
+  "name": "@wix/wix-dashboard-iframe-sdk",
+  "version": "1.0.1",
+  "main": "./dist/src/index",
+  "license": "MIT",
+  "dependencies": {
+    "comlink": "4.3.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "@types/node": "^16.11.26",
+    "typescript": "^4.6.2"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "test": "jest test",
+    "deploy": ":"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  }
+}
