@@ -1,11 +1,11 @@
 {
   "name": "wix-dashboard-iframe-sdk",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "main": "./dist/src/index",
   "license": "MIT",
   "author": "Mor Shemesh",
   "dependencies": {
-    "comlink": "4.3.0"
+    "comlink": "4.3.1"
   },
   "devDependencies": {
     "@types/jest": "^27.4.1",
