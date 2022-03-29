@@ -1,0 +1,2 @@
+# Wix Dashboard Iframe SDK
+[![CircleCI](https://circleci.com/gh/wix-incubator/wix-dashboard-iframe-sdk/tree/master.svg?style=svg)](https://circleci.com/gh/wix-incubator/wix-dashboard-iframe-sdk/tree/master)
