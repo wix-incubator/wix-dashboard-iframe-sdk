@@ -8,9 +8,7 @@ export const ChannelPickerMessageType = 'channel-picker-child-initialize';
 
 export const EstablishConnectionMessage = { comlinkInit: true };
 
-export interface ChannelInitializationData extends Omit<HandshakeMessage, 'type'> {
-  port: MessagePort;
-}
+export interface ChannelInitializationData extends Omit<HandshakeMessage, 'type'> { }
 
 export interface ChannelVersion { bridgeType: string, version: string }
 
