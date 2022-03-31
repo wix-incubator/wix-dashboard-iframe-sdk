@@ -2,13 +2,14 @@ import { ChannelPickerMessageType, EstablishConnectionMessage } from './types';
 
 export function iframeHandshake(bridgeType: string, version: string): Promise<MessagePort> {
   return new Promise(resolve => {
-    window.parent.postMessage({ type: ChannelPickerMessageType, bridgeType, version }, '*');
+    const { port1, port2 } = new MessageChannel();
+    window.parent.postMessage({ type: ChannelPickerMessageType, bridgeType, version, port: port1 }, '*');
     const initialize = (event: MessageEvent<typeof EstablishConnectionMessage>) => {
       if (event.data.comlinkInit) {
-        window.removeEventListener('message', initialize);
-        resolve(event.ports[0]);
+        port2.removeEventListener('message', initialize);
+        resolve(port2);
       }
     };
-    window.addEventListener("message", initialize);
+    port2.addEventListener("message", initialize);
   });
 }
